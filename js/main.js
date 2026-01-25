@@ -114,25 +114,67 @@ window.addEventListener("scroll", () => {
   });
 }, { passive: true });
 
-let activeInterval = null;
 
-function startActiveTime() {
-  if (activeInterval) return;
-  activeInterval = setInterval(() => {
-    track("active_time_tick");
-  }, 60000);
-}
 
-function stopActiveTime() {
-  clearInterval(activeInterval);
-  activeInterval = null;
-}
 
-document.addEventListener("visibilitychange", () => {
-  document.hidden ? stopActiveTime() : startActiveTime();
-});
+// ---------------------------
+// ODT Active-Time Tracker
+// ---------------------------
 
-startActiveTime();
+(function() {
+  let sessionStart = Date.now();
+  let tickCounter = 0;
+  let tickInterval = null;
+  const TICK_MINUTES = 30; 
+
+  function startSession() {
+    sessionStart = Date.now();
+    track("session_start");
+    startSparseTicks();
+  }
+
+  function endSession() {
+    stopSparseTicks();
+    const durationSec = Math.round((Date.now() - sessionStart) / 1000);
+    track("session_end", { duration_sec: durationSec });
+  }
+
+  function startSparseTicks() {
+    if (tickInterval) return;
+
+    tickInterval = setInterval(() => {
+      tickCounter++;
+      if (tickCounter % 1 === 0) {
+        track("active_time_tick");
+      }
+    }, TICK_MINUTES * 60 * 1000);
+  }
+
+  function stopSparseTicks() {
+    if (tickInterval) {
+      clearInterval(tickInterval);
+      tickInterval = null;
+    }
+  }
+
+  // Visibility change: pause/resume session
+  document.addEventListener("visibilitychange", () => {
+    if (document.hidden) {
+      endSession();
+    } else {
+      startSession();
+    }
+  });
+
+  // Page unload: ensure session_end fires
+  window.addEventListener("pagehide", () => {
+    endSession();
+  });
+
+  // Initialize
+  startSession();
+})();
+
 
 
 // <a href="/areas/niagara"
