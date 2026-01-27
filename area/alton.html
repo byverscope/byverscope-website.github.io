@@ -253,38 +253,67 @@ Some experiences offer **additional guides or detailed content**, including:
 <li><a href="https://www.visitcaledon.ca/explore/caledon-village">Caledon Village</a> – rural art spaces and seasonal events (~20 min drive).</li>
 <li><a href="https://www.visitcaledon.ca/explore/belfountain">Belfountain</a> – conservation area with historic sites, trails and a swing bridge  (~10 min drive).</li>
 </ul>
-        <section class="mb-5" data-observe="observe" data-contentid="email_signup">
+        <section id="email-signup" class="mb-5" data-observe="observe" data-contentid="email_signup">
     <h2 class="h3 mb-3">Join our newsletter</h2>
     <p class="text-secondary col-lg-8">
     Stay updated on new areas, experiences, and travel inspiration.
     </p>
-    <form class="row g-2 col-lg-6" onsubmit="event.preventDefault(); alert('Thank you!');">
-        <div class="col-8">
+    <form id="signup-form" class="row g-2 col-lg-6" onsubmit="event.preventDefault();">
+        <div class="col-12 col-md-8">
             <input type="email" class="form-control" placeholder="Your email" required>
         </div>
-        <div class="col-4">
-            <button type="submit" class="btn btn-primary w-100" data-click="click" data-contentid="email_subscribe">Subscribe</button>
+        <div class="col-12 col-md-4">
+            <button type="submit" class="btn btn-primary w-100"
+                    style="min-height: 38px; font-size: 0.9rem;"
+                    data-click="click" data-contentid="email_subscribe">
+
+                <span class="btn-label">Subscribe</span>
+
+                <span class="btn-spinner d-none align-items-center gap-2">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span>Sending…</span>
+                </span>
+            </button>
         </div>
     </form>
+
+    <div id="signup-panel" class="alert alert-success d-none mt-3">
+        Thanks! Please check your email to confirm your subscription.
+    </div>
+    <div id="signup-error-panel" class="alert alert-danger d-none mt-3">
+        Something went wrong. Please refresh and try again.
+    </div>
+
 </section>  
     </main>
     <footer class="bg-body border-top mt-5 py-4">
   <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
-    <span class="text-secondary small mb-2 mb-md-0">
-      2026 © ByverScope · Built for curious travelers · Not an itinerary
-    </span>
-    <div class="d-flex gap-3">
+
+    <!-- Left side: copyright + Terms/Privacy -->
+    <div class="text-center text-md-start mb-3 mb-md-0">
+      <span class="text-secondary small d-block">
+        2026 © ByverScope · Built for curious travelers · Not an itinerary
+      </span>
+      <div class="mt-1">
+        <a href="privacy.html" target="_blank" class="text-secondary small me-2">Privacy</a>
+        <a href="terms.html" target="_blank" class="text-secondary small">Terms</a>
+      </div>
+    </div>
+
+    <!-- Right side: social icons -->
+    <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-md-end">
       <a href="https://byverscope.mtxvp.com/feed.xml" target="_blank" class="text-secondary fs-5" aria-label="RSS"><i class="bi bi-rss"></i></a>
-      <a href="https://mastodon.social/@byverscope"target="_blank"  class="text-secondary fs-5" aria-label="Mastodon"><i class="bi bi-mastodon"></i></a>
+      <a href="https://mastodon.social/@byverscope" target="_blank"  class="text-secondary fs-5" aria-label="Mastodon"><i class="bi bi-mastodon"></i></a>
       <a href="https://www.facebook.com/byverscope" class="text-secondary fs-5" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
       <a href="https://x.com/byverscope" class="text-secondary fs-5" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
       <a href="https://www.instagram.com/byverscope" class="text-secondary fs-5" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
       <a href="https://bsky.app/profile/byverscope.bsky.social" class="text-secondary fs-5" target="_blank" aria-label="Bluesky"><i class="bi bi-bluesky"></i></a>
     </div>
+
   </div>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="/js/main.js?ts=1769381415"></script>  
+<script src="/js/main.js?ts=1769474737"></script>  
 </body>
 </html>

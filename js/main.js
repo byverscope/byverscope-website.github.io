@@ -7,10 +7,7 @@ function getSessionId() {
   return id;
 }
 
-// const API_HOST = "https://api.mtxvp.com";
-
 const API_HOST = "https://api.mtxvp.com";
-
  
 const EVENT_ENDPOINT = API_HOST + "/bvsdt";
 const queue = [];
@@ -18,7 +15,6 @@ let sending = false;
 const MAX_BATCH = 10;
 
 
-// inside site.js
 (function pageviewPixel() {
   const img = new Image();
   img.src = API_HOST +
@@ -114,12 +110,6 @@ window.addEventListener("scroll", () => {
   });
 }, { passive: true });
 
-
-
-
-// ---------------------------
-// ODT Active-Time Tracker
-// ---------------------------
 
 (function() {
   let sessionStart = Date.now();
@@ -258,33 +248,135 @@ document.addEventListener("click", (e) => {
 })();
 
 
+(function signupForm() {
+
+  const form = document.getElementById("signup-form");
+  if (!form) return; 
+
+  const panel = document.getElementById("signup-panel");
+  const errorPanel = document.getElementById("signup-error-panel");
+  const button = form.querySelector("button");
+  const label = button.querySelector(".btn-label");
+  const spinner = button.querySelector(".btn-spinner");
+
+  form.addEventListener("submit", async e => {
+    e.preventDefault();
+
+    const email = form.querySelector("input").value.trim();
+    if (!email) return;
+
+    form.querySelectorAll("input, button").forEach(el => el.disabled = true);
+    label.classList.add("d-none");
+    spinner.classList.remove("d-none");
+    errorPanel.classList.add("d-none");
+
+    try {
+      const res = await fetch(API_HOST + "/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email })
+      });
+
+      const data = await res.json().catch(() => ({}));
+      if (!res.ok) throw data;
+
+      form.classList.add("d-none");
+      panel.classList.remove("d-none");
+
+    } catch (err) {
+      form.classList.add("d-none");
+
+      errorPanel.textContent =
+        err?.message || "Something went wrong. Please try again.";
+
+      errorPanel.classList.remove("d-none");
+    }
+  });
+
+})();
 
 
-// document.querySelectorAll(".email-cta").forEach(section => {
-//   const button = section.querySelector(".email-cta__button");
-//   const form = section.querySelector(".email-cta__form");
-//   const input = form.querySelector("input[type=email]");
-//   const formId = section.dataset.formId;
 
-//   // View detection
-//   const observer = new IntersectionObserver(entries => {
-//     if (entries[0].isIntersecting) {
-//       track("email_form_view", { form_id: formId });
-//       observer.disconnect();
-//     }
-//   }, { threshold: 0.5 });
+document.addEventListener("DOMContentLoaded", () => {
+  const panel = document.getElementById("subscribe-confirm-panel");
+  if (!panel) return; 
 
-//   observer.observe(section);
+  const token = new URLSearchParams(window.location.search).get("token");
+  if (!token) {
+    panel.innerHTML = `
+      <div class="card-body text-center">
+        <h5 class="text-danger">Missing confirmation token</h5>
+      </div>`;
+    return;
+  }
 
-//   // Start
-//   button.addEventListener("click", () => {
-//     form.hidden = false;
-//     track("email_form_start", { form_id: formId });
-//     input.focus();
-//   });
+  fetch(API_HOST + "/confirm", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ token })
+  })
+  .then(async r => {
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw data;
+    return data;
+  })
+  .then(() => {
+    panel.innerHTML = `
+      <div class="card-body text-center">
+        <h5 class="text-success">Confirmed!</h5>
+        <p>You’re now subscribed.</p>
+      </div>`;
+  })
+  .catch(err => {
+    const msg = err?.message || "Invalid or expired link";
+    panel.innerHTML = `
+      <div class="card-body text-center">
+        <h5 class="text-danger">${msg}</h5>
+      </div>`;
+  });
+});
 
-//   // Submit
-//   form.addEventListener("submit", () => {
-//     track("email_form_submit", { form_id: formId });
-//   });
-// });
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const panel = document.getElementById("subscribe-remove-panel");
+  if (!panel) return; 
+
+  const token = new URLSearchParams(window.location.search).get("token");
+  if (!token) {
+    panel.innerHTML = `
+      <div class="card-body text-center">
+        <h5 class="text-danger">This unsubscribe token is invalid.</h5>
+      </div>`;
+    return;
+  }
+
+  fetch(API_HOST + "/unsubscribe", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ token })
+  })
+  .then(async r => {
+    const data = await r.json().catch(() => ({}));
+    if (!r.ok) throw data;
+    return data;
+  })
+  .then(() => {
+    panel.innerHTML = `
+      <div class="card-body text-center">
+        <h1 class="h4">You're unsubscribed</h1>
+        <p class="text-secondary">
+          You will no longer receive emails from us.
+        </p>
+      </div>`;
+  })
+  .catch(err => {
+    const msg = err?.message || "Invalid token";
+    panel.innerHTML = `
+      <div class="card-body text-center">
+        <h5 class="text-danger">${msg}</h5>
+      </div>`;
+  });
+});
+
+
