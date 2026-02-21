@@ -4,7 +4,15 @@
     <author><name>mtxvp</name></author>
     <title>ByverScope — Explore Places Through Experiences</title>
     <id>https://byverscope.mtxvp.com/feed.xml</id>
-    <updated>2026-02-12T01:56:47Z</updated>
+    <updated>2026-02-21T03:59:09Z</updated>
+    
+    <entry>
+        <id>https://byverscope.mtxvp.com/experience/cobourg-brighton-colborne.html</id>
+        <title></title>
+        <link href="https://byverscope.mtxvp.com/experience/cobourg-brighton-colborne.html"/>
+        <content type="html"></content>
+        <published>2026-02-16T22:44:00Z</published>
+    </entry>
     
     <entry>
         <id>https://byverscope.mtxvp.com/experience/morning-in-kemptville.html</id>

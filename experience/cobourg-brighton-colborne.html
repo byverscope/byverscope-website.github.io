@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <script>
+    (() => {
+      'use strict'
+      document.documentElement.setAttribute('data-bs-theme', window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light')
+    })()
+  </script>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="ByverScope helps you explore places through curated, human-scale experiences — designed for slow travel, families, and curious explorers.">
+  <meta name="author" content="mtxvp">
+  <meta name="google-site-verification" content="GuEwxikY4H-n3yO-llbNjlHmx9intpzF6EzMsoMw2No" />
+
+  <meta property="og:title" content="ByverScope — Explore Places Through Experiences" />
+  <meta property="og:description" content="Curated experiences layered on real places. No itineraries, no rush." />
+  <meta property="og:type" content="website" />
+
+  <title>ByverScope — Explore Places Through Experiences </title>
+
+  <link rel="canonical" href="">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Alata&family=Fascinate&family=Oldenburg&family=Rammetto+One&family=Righteous&display=swap" rel="stylesheet" crossorigin="anonymous">
+
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap" rel="stylesheet" crossorigin="anonymous">   
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" rel="stylesheet" crossorigin="anonymous">  
+  <link href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" rel="stylesheet" crossorigin="anonymous"/>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- <link rel="stylesheet" href="/css/main.css?v=20260111"> -->
+
+</head>
+   
+    
+<body>
+    <header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-body border-bottom" data-bs-theme="auto">
+    <div class="container">
+      <a href="/" class="navbar-brand fw-bold">ByverScope</a>
+    </div>
+  </nav>
+
+  <!-- <nav class="navbar navbar-expand-lg" aria-label="Main navigation">
+    <div class="container">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+         <div class="col-4 pt-1 text-left">
+          <a class="text-dark text-decoration-none" href="/"><img src="/media/max_vapor_pump_logo3_200.png" style="max-height: 75px;"></a>
+        </div> 
+        <div class="col-4">
+            <a href="/"  class="navbar-brand fw-bold">ByverScope</a>
+        </div>
+        <div class="col-4 d-flex justify-content-end align-items-center">
+          &nbsp;
+        </div>
+      </div>
+    </div>
+  </nav> -->
+</header>
+   
+
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-10" >
+                <h1 id="south-northumberland-brighton-colborne-cobourg">South Northumberland: Brighton → Colborne → Cobourg</h1>
+<p>A full day ·  Walk (with short drives between towns) ·  West → East ·  Lakeshore &amp; historic main streets</p>
+<p>South <a href="https://northumberland.ca/county-government/about-the-county/">Northumberland</a> unfolds in three compact towns along Lake Ontario, each with a distinct downtown core and shoreline access. This west-to-east route moves from the gateway community of Brighton, through heritage-rich village of Colborne, and ends on the broad waterfront of Cobourg. All three sit within Northumberland County and are easily linked by County Road 2 or Highway 401.</p>
+<hr />
+<h1 id="brighton-main-street-to-the-bay">Brighton: Main Street to the Bay</h1>
+<p><strong>1 hour · Walk · Compact downtown + waterfront lookout</strong></p>
+<p><a href="https://www.brighton.ca/en/discover-brighton/discover-brighton.aspx">Brighton</a> serves as the western gateway to Northumberland County, historically shaped by farming, apple orchards, and proximity to Presqu'ile Provincial Park. The downtown is small but orderly, with civic buildings, murals, and a direct line of sight toward Presqu’ile Bay. What stands out is how quickly the setting shifts from main street storefronts to open water views.</p>
+<div class="row justify-content-left">
+  <p class="mb-1 text-left">A restored red British-style phone booth and pretty landscaping welcome you to the town.</p>
+  <div class="col-12 col-md-10 col-lg-12">
+    <div class="row g-3 mb-4 justify-content-left"> 
+      <div class="col-12 col-md-6">
+        <img src="https://i.postimg.cc/T2d634CN/20240713-142221.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1581 2108 379 1196"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="https://i.postimg.cc/mRBRjPBj/20240713-142406.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1846 2461 55 526"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">The Brighton Post Office, topped with a clock, anchors the civic feel of downtown.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/hgsn5KGF/20240713-142905.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/hgsn5KGF/20240713-142905.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Main Street: low brick façades with couple of cozy book shops tucked between other businesses.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/gm0p91wr/20240713-142911.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/gm0p91wr/20240713-142911.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">A painted pedestrian passage between buildings adds colour and local character.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/pR1HPk8J/20240713-143020.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/pR1HPk8J/20240713-143020.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Young Street meets Main — heritage portal and planters soften the intersection.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/ds1X8fPh/20240713-143234-copy.jpg" data-cw="1960 1103 0 1243"
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/ds1X8fPh/20240713-143234-copy.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Look up on historic two-storey storefronts. A brick façade with Rod of Asclepius in the pediment and local historical business name on the other.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/vGsNPTws/20240713-143259-copy.jpg" data-cw=" 1960 1103 0 971"
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/vGsNPTws/20240713-143259-copy.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1 text-left">Shaded green space in Memorial Park provides an easy pause. Check the time with the clock, visit the bookstore.</p>
+  <div class="col-12 col-md-10 col-lg-12">
+    <div class="row g-3 mb-4 justify-content-left"> 
+      <div class="col-12 col-md-6">
+        <img src="https://i.postimg.cc/wxqCbBm9/20240713-144252.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1470 1960 382 0"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="https://i.postimg.cc/2znRFDJp/20240713-144223.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1381 1841 477 1075"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1"></p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/WpNBf4k3/20240713-144146.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/WpNBf4k3/20240713-144146.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Presqu’ile Bay opens up beyond the harbour — a wide, calm stretch of Lake Ontario shoreline.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/sjyFTLd7/20240713-150951.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/sjyFTLd7/20240713-150951.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<h3 id="good-to-know">Good to Know</h3>
+<ul>
+<li><strong>Start / End:</strong> Main St near the Post Office → Memorial Park → Harbour / Bay lookout</li>
+<li><strong>Transit:</strong> Best by car between towns; downtown is fully walkable</li>
+</ul>
+<h3 id="spatial-overview">Spatial overview</h3>
+<section class="mb-5" data-observe="observe" data-contentid="map_brighton_area">
+    <div id="map-brighton_area" style="height: 400px;" class="rounded border" data-contentid="map_brighton_area"></div>
+    <a id="link-brighton_area"
+      href="#"
+      target="_blank"
+      rel="noopener"
+      class="small text-decoration-none">
+      Open larger map →
+    </a>
+  </section>
+
+<script>
+(function() {
+  // Use unique ID from your system to target specific elements
+  const mapId = 'map-brighton_area';
+  const linkId = 'link-brighton_area';
+
+  const point_data = `geo:44.041073,-77.741570?z=19 | Welcome to Brighton booth
+geo:44.041829,-77.739035?z=19 | Memorial Park
+geo:44.042075,-77.738279?z=19| Post Office
+44.041993,-77.737600 | Pedestrian passage 
+geo:44.042058,-77.736806?z=19 | Heritage business buildings`;
+
+  function parsePoints(data) {
+    return data
+      .trim()
+      .split('\n')
+      .map(line => {
+        let [coordPart, label] = line.split('|').map(s => s.trim());
+        let lat, lon;
+        if (coordPart.startsWith('geo:')) {
+            const cleanCoords = coordPart.replace('geo:', '').split('?')[0];
+            const parts = cleanCoords.split(',').map(s => parseFloat(s.trim()));
+            lat = parts[0]; lon = parts[1];
+        } else if (coordPart.includes('lat=')) {
+          const params = new URLSearchParams(coordPart);
+          lat = parseFloat(params.get('lat'));
+          lon = parseFloat(params.get('lon'));
+        } else {
+          const parts = coordPart.split(',').map(s => parseFloat(s.trim()));
+          lat = parts[0]; lon = parts[1];
+        }
+        return (isNaN(lat) || !lon) ? null : { lat, lon, label };
+      })
+      .filter(p => p !== null);
+  }
+
+  const points = parsePoints(point_data);
+  if (points.length === 0) return;
+
+  // ---- MAP INIT (Targeting specific mapId) ----
+  const map = L.map(mapId, {
+    scrollWheelZoom: false,
+    attributionControl: false
+  });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  const bounds = L.latLngBounds(points.map(p => [p.lat, p.lon]));
+  map.fitBounds(bounds.pad(0.25));
+
+  // ---- MARKERS ----
+  points.forEach(p => {
+    L.circleMarker([p.lat, p.lon], { radius: 6, color: '#333', fillOpacity: 0.85 })
+      .addTo(map)
+      .bindTooltip(p.label || '', { direction: 'top', offset: [0, -4], sticky: true, opacity: 0.9 });
+  });
+
+  // ---- ROUTE ----
+  if (true) {
+    const routePoints = [...points]
+      .sort((a, b) => (a.lon - b.lon) || (a.lat - b.lat))
+      .map(p => [p.lat, p.lon]);
+
+    if (routePoints.length > 2) routePoints.push(routePoints[0]);
+
+    L.polyline(routePoints, { color: '#666', weight: 4, opacity: 0.6, dashArray: '6,6' }).addTo(map);
+  }
+
+  // ---- UPDATE LINK ----
+  const center = bounds.getCenter();
+  const zoom = map.getBoundsZoom(bounds);
+  document.getElementById(linkId).href = 
+    `https://www.openstreetmap.org/#map=${zoom}/${center.lat}/${center.lng}&layers=N`;
+
+})(); // End IIFE
+</script>
+
+<p>Brighton is compact and efficient — a short, tidy main street paired with access to open water. It works well as a calm starting point before heading east.</p>
+<hr />
+<h1 id="colborne-heritage-core-victoria-square">Colborne: Heritage Core &amp; Victoria Square</h1>
+<p><strong>1/2 hour · Walk · Historic crossroads village</strong></p>
+<p><a href="https://www.northumberlandtourism.com/en/road-trip/colborne.aspx">Colborne</a> sits within the municipality of <a href="https://www.cramahe.ca/parks-recreation/parks-and-trails/">Cramahe</a> and developed as a 19th-century milling and railway community. Today, its about architectural continuity: two-storey brick buildings, parks and preserved artifacts that hint at its industrial and civic past.</p>
+<div class="row justify-content-left">
+  <p class="mb-1">Rows of older two-storey commercial buildings across the street.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/gckCW62M/20240713-171350.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/gckCW62M/20240713-171350.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1 text-left">A traditional street clock, modern landmark (Empathy, 2011) and historic cannon from 1844 sharing the streetscape. The yellow sculpture in the middle was unveiled in July 2011 and is intended as a metaphor for peace and harmony.</p>
+  <div class="col-12 col-md-10 col-lg-12">
+    <div class="row g-2 mb-4 justify-content-left"> 
+      <div class="col-12 col-md-4">
+        <img src="https://i.postimg.cc/9XF6hqfH/20240713-171448.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1960 2614 0 423"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+
+      <div class="col-12 col-md-4">
+        <img src="https://i.postimg.cc/XVDx07mX/20240713-173140-copy.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1960 3484 0 0"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+
+      <div class="col-12 col-md-4">
+        <img src="https://i.postimg.cc/BSLpZff5/20240713-172138-copy.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1960 3484 0 122"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Street view showing local commercial strip.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/4fD5m2Jx/20240713-171515.jpg" data-cw="2456 1382 568 683"
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/4fD5m2Jx/20240713-171515.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Victoria Square Park — open lawn framed by mature trees.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/vMYF9CtK/20240713-171627.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/vMYF9CtK/20240713-171627.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">The park canopy structure from another angle, used for community gatherings.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/hg2F0M2N/20240713-171704.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/hg2F0M2N/20240713-171704.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1 text-left">Fountain and the historic bell that rang for over 50 years to signal curfew and fire alarms.</p>
+  <div class="col-12 col-md-10 col-lg-12">
+    <div class="row g-3 mb-4 justify-content-left"> 
+      <div class="col-12 col-md-6">
+        <img src="https://i.postimg.cc/fZMQb8gF/20240713-172110.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1432 1909 114 1249"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+      <div class="col-12 col-md-6">
+        <img src="https://i.postimg.cc/fMzvt9hc/20240713-171721-copy.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1960 2613 0 310"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+    </div>
+  </div>
+</div>
+
+<h3 id="good-to-know_1">Good to Know</h3>
+<ul>
+<li><strong>Start / End:</strong> Main St corridor → Victoria Square Park</li>
+<li><strong>Transit:</strong> Street parking along Main; easy walking loop</li>
+</ul>
+<h3 id="spatial-overview_1">Spatial overview</h3>
+<section class="mb-5" data-observe="observe" data-contentid="map_colborne_area">
+    <div id="map-colborne_area" style="height: 400px;" class="rounded border" data-contentid="map_colborne_area"></div>
+    <a id="link-colborne_area"
+      href="#"
+      target="_blank"
+      rel="noopener"
+      class="small text-decoration-none">
+      Open larger map →
+    </a>
+  </section>
+
+<script>
+(function() {
+  // Use unique ID from your system to target specific elements
+  const mapId = 'map-colborne_area';
+  const linkId = 'link-colborne_area';
+
+  const point_data = `geo:44.005616,-77.885795?z=19 | Empathy sculpture / Art Gallery
+geo:44.005549,-77.888614?z=17 | Victoria Square Park
+geo:44.005155,-77.887828?z=19 | Street Clock`;
+
+  function parsePoints(data) {
+    return data
+      .trim()
+      .split('\n')
+      .map(line => {
+        let [coordPart, label] = line.split('|').map(s => s.trim());
+        let lat, lon;
+        if (coordPart.startsWith('geo:')) {
+            const cleanCoords = coordPart.replace('geo:', '').split('?')[0];
+            const parts = cleanCoords.split(',').map(s => parseFloat(s.trim()));
+            lat = parts[0]; lon = parts[1];
+        } else if (coordPart.includes('lat=')) {
+          const params = new URLSearchParams(coordPart);
+          lat = parseFloat(params.get('lat'));
+          lon = parseFloat(params.get('lon'));
+        } else {
+          const parts = coordPart.split(',').map(s => parseFloat(s.trim()));
+          lat = parts[0]; lon = parts[1];
+        }
+        return (isNaN(lat) || !lon) ? null : { lat, lon, label };
+      })
+      .filter(p => p !== null);
+  }
+
+  const points = parsePoints(point_data);
+  if (points.length === 0) return;
+
+  // ---- MAP INIT (Targeting specific mapId) ----
+  const map = L.map(mapId, {
+    scrollWheelZoom: false,
+    attributionControl: false
+  });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  const bounds = L.latLngBounds(points.map(p => [p.lat, p.lon]));
+  map.fitBounds(bounds.pad(0.25));
+
+  // ---- MARKERS ----
+  points.forEach(p => {
+    L.circleMarker([p.lat, p.lon], { radius: 6, color: '#333', fillOpacity: 0.85 })
+      .addTo(map)
+      .bindTooltip(p.label || '', { direction: 'top', offset: [0, -4], sticky: true, opacity: 0.9 });
+  });
+
+  // ---- ROUTE ----
+  if (true) {
+    const routePoints = [...points]
+      .sort((a, b) => (a.lon - b.lon) || (a.lat - b.lat))
+      .map(p => [p.lat, p.lon]);
+
+    if (routePoints.length > 2) routePoints.push(routePoints[0]);
+
+    L.polyline(routePoints, { color: '#666', weight: 4, opacity: 0.6, dashArray: '6,6' }).addTo(map);
+  }
+
+  // ---- UPDATE LINK ----
+  const center = bounds.getCenter();
+  const zoom = map.getBoundsZoom(bounds);
+  document.getElementById(linkId).href = 
+    `https://www.openstreetmap.org/#map=${zoom}/${center.lat}/${center.lng}&layers=N`;
+
+})(); // End IIFE
+</script>
+
+<p>Colborne moves at a slower pace, with most points of interest clustered within a few blocks. Its strength lies in preserved civic details and a clearly defined historic square.</p>
+<hr />
+<h1 id="cobourg-harbourfront-king-street">Cobourg: Harbourfront &amp; King Street</h1>
+<p><strong>2–3+ hours · Walk · Waterfront + event-ready downtown</strong></p>
+<p>Cobourg is the largest of the three towns and a long-established Lake Ontario port. Its harbour, marina, and expansive Victoria Park define the waterfront, while King Street forms a lively commercial spine. The town blends maritime history with active public space and seasonal festivals.</p>
+<div class="row justify-content-left">
+  <p class="mb-1">Floral clock in the Victoria Park</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/M6mkDBvw/20250913-130124.jpg" data-cw="3228 1816 270 0"
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/M6mkDBvw/20250913-130124.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Time capsule near the Floral Clock, to be opened in 2068.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/tX3wnzZb/20250913-130212.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/tX3wnzZb/20250913-130212.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Centennial Rose monument in Victoria Park installed to celebrate the 100th anniversary of the park, surrounded by marigolds.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/7Hqc3T0h/20250913-130724.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/7Hqc3T0h/20250913-130724.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Make Waves statue of Fern Blodgett Sunde, first woman to serve deep sea as wireless radio operator (notice the the headphones). Her <a href="https://legionmagazine.com/a-duplicate-of-a-canadian-war-memorial-at-home-in-norway/" target="_blank">twin statue</a> was unveiled in 2025 in Farsund, Norway.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/Dv5NByPP/20240601-124905.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/Dv5NByPP/20240601-124905.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Tree-lined church frontage adding depth to the residential streetscape.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/8pwYtPmx/20240601-131709.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/8pwYtPmx/20240601-131709.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Mural depicting the historic Cobourg–Rochester steamer ferry connection.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/FrhqyJ3k/20250913-131449-1x1.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/FrhqyJ3k/20250913-131449-1x1.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">King Street closed for a local vendor event — tents filling the roadway.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/h4j5wWCF/20240601-132752.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/h4j5wWCF/20240601-132752.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Historic cannon positioned in front of the art gallery building.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/szcftYn9/20240601-141852.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/szcftYn9/20240601-141852.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1 text-left">Elements of architecture of Victoria Hall, a landmark 19th-century building, housing <a href="https://www.artgalleryofnorthumberland.ca/" target="_blank">Art Gallery of Northumberland</a> and designed in the Palladian/Neoclassical style. Facade of the building features a grand portico, Four massive, fluted Corinthian columns support the front pediment. The Cupola with an octagonal clock tower and belfry sits atop the roof. There are many other elaborate elements if look closer and around.</p>
+  <div class="col-12 col-md-10 col-lg-12">
+    <div class="row g-2 mb-4 justify-content-left"> 
+      <div class="col-12 col-md-4">
+        <img src="https://i.postimg.cc/CYwpKcQT/20250913-121802.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1479 2629 180 0"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+
+      <div class="col-12 col-md-4">
+        <img src="https://i.postimg.cc/fZMQb8rW/20250913-121935.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1806 3211 10 406"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+
+      <div class="col-12 col-md-4">
+        <img src="https://i.postimg.cc/BsN9P2r4/20250913-121806.jpg" 
+            class="img-fluid rounded-1 object-fit-cover" 
+            data-cw="1043 1854 773 1328"
+            data-nocrop="false"
+            style="height: 650px; width: 100%;">
+      </div>
+    </div>
+  </div>
+</div>
+<p>In the middle the monument represents the Town Crier, a historic and still-active ceremonial figure in the Town of Cobourg, depicted in traditional 18th-century livery, featuring a tricorne hat and a long frock coat. The hand bell was used to attract the crowd's attention before shouting the famous phrase, "Oyez, Oyez, Oyez!". The Crier would bring Royal and Government Proclamations, Local Justice and Safety, Marketplace and "Classifieds" and Public Health Notices as the living newspaper before the internet, radio, or even high literacy rates for the townspeople. Harming a Town Crier was considered treason, as they often had to deliver "bad news" like tax hikes or drafting men for war!</p>
+<div class="row justify-content-left">
+  <p class="mb-1">Anchor artifact positioned near the marina.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/vQFCmKm1/20250913-122935.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/vQFCmKm1/20250913-122935.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Open harbour waters extending toward Lake Ontario.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/p2b3dSd7/20250913-123121.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/p2b3dSd7/20250913-123121.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">An 1867 ore car reminding about ore production in Blairton, Ontario. Over 150,000 tons of ore were shipped before operations ceased in 1881.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/jRJGtTRq/20250913-122837.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/jRJGtTRq/20250913-122837.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Rows of boats moored in Cobourg Marina.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/mbfKrnr3/20250913-122942.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/mbfKrnr3/20250913-122942.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Coast guard and other vessels docked at the marina.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/LST4rtyb/20240601-161450.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/LST4rtyb/20240601-161450.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<div class="row justify-content-left">
+  <p class="mb-1">Pier extending into the harbour, lighthouse visible in the distance.</p>
+  <div class="col-12 col-md-10 col-lg-12" >
+    <div class="ratio ratio-16x9 mb-4">
+      <img src="https://i.postimg.cc/fsKW6c2h/20240601-162323.jpg" data-cw=""
+          class="img-fluid rounded-1 object-fit-cover"
+          >
+    </div> 
+
+    <!-- <img src="https://i.postimg.cc/fsKW6c2h/20240601-162323.jpg"
+         class="img-fluid rounded-3 my-3"
+         style="max-height: 420px;"> --> 
+  </div>
+</div>
+
+<h3 id="good-to-know_2">Good to Know</h3>
+<ul>
+<li><strong>Start / End:</strong> King Street → Victoria Park → Marina → Pier</li>
+<li><strong>Transit:</strong> Paid and free municipal lots; highly walkable core</li>
+<li><strong>Coffee / Washrooms:</strong> Numerous cafés on King; public washrooms in Victoria Park (seasonal)</li>
+<li><strong>Timing gotchas:</strong> Summer festivals and beach weekends significantly increase foot traffic</li>
+</ul>
+<h3 id="spatial-overview_2">Spatial overview</h3>
+<section class="mb-5" data-observe="observe" data-contentid="map_cobourg_area">
+    <div id="map-cobourg_area" style="height: 400px;" class="rounded border" data-contentid="map_cobourg_area"></div>
+    <a id="link-cobourg_area"
+      href="#"
+      target="_blank"
+      rel="noopener"
+      class="small text-decoration-none">
+      Open larger map →
+    </a>
+  </section>
+
+<script>
+(function() {
+  // Use unique ID from your system to target specific elements
+  const mapId = 'map-cobourg_area';
+  const linkId = 'link-cobourg_area';
+
+  const point_data = `geo:43.957738,-78.159496?z=18 | Fern Blodgett Sunde Statue
+geo:43.959955,-78.161695?z=18 | Floral Clock & Time Capsule
+geo:43.960739,-78.161786?z=18 | St. Peter's Anglican Church
+geo:43.959604,-78.167703?z=18 | Art Gallery of Northumberland
+geo:43.956449,-78.167188?z=17 | Cobourg Marina
+geo:43.954093,-78.164163?z=17 | East Pierhead Lighthouse`;
+
+  function parsePoints(data) {
+    return data
+      .trim()
+      .split('\n')
+      .map(line => {
+        let [coordPart, label] = line.split('|').map(s => s.trim());
+        let lat, lon;
+        if (coordPart.startsWith('geo:')) {
+            const cleanCoords = coordPart.replace('geo:', '').split('?')[0];
+            const parts = cleanCoords.split(',').map(s => parseFloat(s.trim()));
+            lat = parts[0]; lon = parts[1];
+        } else if (coordPart.includes('lat=')) {
+          const params = new URLSearchParams(coordPart);
+          lat = parseFloat(params.get('lat'));
+          lon = parseFloat(params.get('lon'));
+        } else {
+          const parts = coordPart.split(',').map(s => parseFloat(s.trim()));
+          lat = parts[0]; lon = parts[1];
+        }
+        return (isNaN(lat) || !lon) ? null : { lat, lon, label };
+      })
+      .filter(p => p !== null);
+  }
+
+  const points = parsePoints(point_data);
+  if (points.length === 0) return;
+
+  // ---- MAP INIT (Targeting specific mapId) ----
+  const map = L.map(mapId, {
+    scrollWheelZoom: false,
+    attributionControl: false
+  });
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+
+  const bounds = L.latLngBounds(points.map(p => [p.lat, p.lon]));
+  map.fitBounds(bounds.pad(0.25));
+
+  // ---- MARKERS ----
+  points.forEach(p => {
+    L.circleMarker([p.lat, p.lon], { radius: 6, color: '#333', fillOpacity: 0.85 })
+      .addTo(map)
+      .bindTooltip(p.label || '', { direction: 'top', offset: [0, -4], sticky: true, opacity: 0.9 });
+  });
+
+  // ---- ROUTE ----
+  if (true) {
+    const routePoints = [...points]
+      .sort((a, b) => (a.lon - b.lon) || (a.lat - b.lat))
+      .map(p => [p.lat, p.lon]);
+
+    if (routePoints.length > 2) routePoints.push(routePoints[0]);
+
+    L.polyline(routePoints, { color: '#666', weight: 4, opacity: 0.6, dashArray: '6,6' }).addTo(map);
+  }
+
+  // ---- UPDATE LINK ----
+  const center = bounds.getCenter();
+  const zoom = map.getBoundsZoom(bounds);
+  document.getElementById(linkId).href = 
+    `https://www.openstreetmap.org/#map=${zoom}/${center.lat}/${center.lng}&layers=N`;
+
+})(); // End IIFE
+</script>
+
+<p>Cobourg expands the experience outward — from historic downtown to open harbour and beach. It’s the most active stop of the three, with enough waterfront and event space to comfortably anchor the day before heading home.</p>
+                <section id="email-signup" class="mb-5" data-observe="observe" data-contentid="email_signup">
+    <h2 class="h3 mb-3">Join our newsletter</h2>
+    <p class="text-secondary col-lg-8">
+    Stay updated on new areas, experiences, and travel inspiration.
+    </p>
+    <form id="signup-form" class="row g-2 col-lg-6" onsubmit="event.preventDefault();">
+        <div class="col-12 col-md-8">
+            <input type="email" class="form-control" placeholder="Your email" required>
+        </div>
+        <div class="col-12 col-md-4">
+            <button type="submit" class="btn btn-primary w-100"
+                    style="min-height: 38px; font-size: 0.9rem;"
+                    data-click="click" data-contentid="email_subscribe">
+
+                <span class="btn-label">Subscribe</span>
+
+                <span class="btn-spinner d-none align-items-center gap-2">
+                    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    <span>Sending…</span>
+                </span>
+            </button>
+        </div>
+    </form>
+
+    <div id="signup-panel" class="alert alert-success d-none mt-3">
+        Thanks! Please check your email to confirm your subscription.
+    </div>
+    <div id="signup-error-panel" class="alert alert-danger d-none mt-3">
+        Something went wrong. Please refresh and try again.
+    </div>
+
+</section>  
+            </div>
+        </div>
+    </main>
+    <footer class="bg-body border-top mt-5 py-4">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+
+    <!-- Left side: copyright + Terms/Privacy -->
+    <div class="text-center text-md-start mb-3 mb-md-0">
+      <span class="text-secondary small d-block">
+        2026 © ByverScope · Built for curious travelers · Not an itinerary
+      </span>
+      <div class="mt-1">
+        <a href="privacy.html" target="_blank" class="text-secondary small me-2">Privacy</a>
+        <a href="terms.html" target="_blank" class="text-secondary small">Terms</a>
+      </div>
+    </div>
+
+    <!-- Right side: social icons --> 
+    <div class="d-flex gap-3 flex-wrap justify-content-center justify-content-md-end">
+      <a href="/feed.xml" target="_blank" class="text-secondary fs-5" aria-label="RSS"><i class="bi bi-rss"></i></a>
+      <a href="https://mastodon.social/@byverscope" target="_blank"  class="text-secondary fs-5" aria-label="Mastodon"><i class="bi bi-mastodon"></i></a>
+      <a href="https://www.facebook.com/byverscope" class="text-secondary fs-5" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="https://x.com/byverscope" class="text-secondary fs-5" target="_blank" aria-label="Twitter"><i class="bi bi-twitter"></i></a>
+      <a href="https://www.instagram.com/byverscope" class="text-secondary fs-5" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="https://bsky.app/profile/byverscope.bsky.social" class="text-secondary fs-5" target="_blank" aria-label="Bluesky"><i class="bi bi-bluesky"></i></a>
+    </div>
+
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="/js/main.js?ts=1771646349"></script>  
+</body>
+</html>
