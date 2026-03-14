@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>ODT – Explore Through Experiences</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+
+/* HERO */
+
+.hero {
+    position: relative;
+    background-image: url("/media/img/20200629_120650.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    width: 100%; /* Added for Firefox stability */
+    color: white;
+    overflow: hidden; /* Prevents overlay bleed */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    z-index: 1; /* Ensure it stays below content */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%; /* Ensures text stays centered in the flex row */
+}
+
+
+/* EXPERIENCE CARDS */
+
+.exp-card img {
+    height: 220px;
+    object-fit: cover;
+}
+
+.exp-card:hover {
+    transform: translateY(-4px);
+    transition: 0.2s;
+}
+
+.duration-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* TAG BUTTONS */
+
+.tag-btn {
+    border-radius: 40px;
+}
+
+/* AREA CARDS */
+
+.area-card img {
+    height: 160px;
+    object-fit: cover;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+
+<section class="hero d-flex align-items-center">
+<div class="hero-overlay"></div>
+
+<div class="container hero-content text-center">
+
+<h1 class="display-5 fw-semibold">Wander with curiosity</h1>
+
+<p class="lead mt-3">
+Discover peaceful, story-rich experiences in real places.
+</p>
+
+<p class="mb-4">
+Walk river towns. Explore working canals. Notice small details.
+</p>
+
+<a href="/experiences.html" class="btn btn-primary btn-lg me-2">
+Explore experiences
+</a>
+
+<a href="/areas.html" class="btn btn-outline-light btn-lg">
+Browse areas
+</a>
+
+</div>
+</section>
+
+
+<!-- START EXPLORING -->
+
+<section class="container py-5">
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+<h2 class="h3 mb-0">Start with an experience</h2>
+
+<a href="/experiences.html" class="text-decoration-none">
+View all →
+</a>
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-6 col-lg-4">
+<div class="card exp-card h-100">
+
+<div class="position-relative">
+<img src="/town/alton/20240706_123225.jpg" class="card-img-top">
+
+<span class="badge bg-dark duration-badge">⏱ 3h</span>
+</div>
+
+<div class="card-body d-flex flex-column">
+
+<h3 class="h5">
+<a href="/experience/walk-in-alton.html" class="text-decoration-none">
+A Slow Walk Through Alton
+</a>
+</h3>
+
+<p class="text-secondary small mb-3">
+River paths, mills, and quiet village streets.
+</p>
+
+<div class="mt-auto">
+<span class="badge bg-light text-dark me-1">Waterfront</span>
+<span class="badge bg-light text-dark">Family-friendly</span>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div class="col-md-6 col-lg-4">
+<div class="card exp-card h-100">
+
+<div class="position-relative">
+<img src="/town/campbellford/20210911_134034.jpg" class="card-img-top">
+
+<span class="badge bg-dark duration-badge">⏱ 3h</span>
+</div>
+
+<div class="card-body d-flex flex-column">
+
+<h3 class="h5">
+<a href="/experience/walk-in-campbellford.html" class="text-decoration-none">
+Along the Trent in Campbellford
+</a>
+</h3>
+
+<p class="text-secondary small mb-3">
+River bridges, locks, and working waterfront.
+</p>
+
+<div class="mt-auto">
+<span class="badge bg-light text-dark me-1">Waterfront</span>
+<span class="badge bg-light text-dark">Infrastructure</span>
+</div>
+
+</div>
+</div>
+</div>
+
+
+<div class="col-md-6 col-lg-4">
+<div class="card exp-card h-100">
+
+<div class="position-relative">
+<img src="/town/kemptville/20250820_082257.heic" class="card-img-top">
+
+<span class="badge bg-dark duration-badge">⏱ 1h</span>
+</div>
+
+<div class="card-body d-flex flex-column">
+
+<h3 class="h5">
+<a href="/experience/morning-in-kemptville.html" class="text-decoration-none">
+Morning in Kemptville
+</a>
+</h3>
+
+<p class="text-secondary small mb-3">
+Coffee, riverbanks, and a quiet historic core.
+</p>
+
+<div class="mt-auto">
+<span class="badge bg-light text-dark me-1">Morning</span>
+<span class="badge bg-light text-dark">Walkable</span>
+</div>
+
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+
+<!-- TAG DISCOVERY -->
+
+<section class="container py-5">
+
+<h2 class="h3 mb-4 text-center">What kind of day are you looking for?</h2>
+
+<div class="d-flex flex-wrap justify-content-center gap-3">
+
+<a href="/tag/waterfront.html" class="btn btn-outline-secondary tag-btn">
+🌊 Waterfront walks
+</a>
+
+<a href="/tag/nature.html" class="btn btn-outline-secondary tag-btn">
+🌿 Nature & trails
+</a>
+
+<a href="/tag/infrastructure.html" class="btn btn-outline-secondary tag-btn">
+🧱 Infrastructure & history
+</a>
+
+<a href="/tag/food.html" class="btn btn-outline-secondary tag-btn">
+☕ Food & local stops
+</a>
+
+<a href="/tag/family.html" class="btn btn-outline-secondary tag-btn">
+👨‍👩‍👧 Family-friendly
+</a>
+
+<a href="/tag/winter.html" class="btn btn-outline-secondary tag-btn">
+❄️ Winter-ready
+</a>
+
+<a href="/tag/golden-hour.html" class="btn btn-outline-secondary tag-btn">
+🌅 Golden hour
+</a>
+
+</div>
+
+</section>
+
+
+<!-- AREAS -->
+
+<section class="container py-5">
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+<h2 class="h3 mb-0">Explore by area</h2>
+
+<a href="/areas.html" class="text-decoration-none">
+View all →
+</a>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-md-6 col-lg-4">
+
+<div class="card area-card h-100">
+
+<img src="/town/alton/20240706_130827.jpg" class="card-img-top">
+
+<div class="card-body">
+
+<h3 class="h5">
+<a href="/area/alton.html" class="text-decoration-none">
+Alton
+</a>
+</h3>
+
+<p class="text-secondary small mb-0">
+Waterfront village • 3 experiences
+</p>
+
+</div>
+
+</div>
+</div>
+
+
+<div class="col-md-6 col-lg-4">
+
+<div class="card area-card h-100">
+
+<img src="/town/campbellford/20210911_133758.jpg" class="card-img-top">
+
+<div class="card-body">
+
+<h3 class="h5">
+<a href="/area/campbellford.html" class="text-decoration-none">
+Campbellford
+</a>
+</h3>
+
+<p class="text-secondary small mb-0">
+Canal town on the Trent • 5 experiences
+</p>
+
+</div>
+
+</div>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section class="container py-5">
+
+<div class="row justify-content-center">
+<div class="col-lg-8 text-center">
+
+<h2 class="h3 mb-4">Why ODT?</h2>
+
+<p class="text-secondary">
+ODT curates thoughtful experiences rooted in real places —
+small towns, working infrastructure, river corridors,
+and walkable neighborhoods.
+</p>
+
+<p class="text-secondary">
+Each experience blends movement, story, and observation,
+inviting you to explore with curiosity and return restored.
+</p>
+
+</div>
+</div>
+
+</section>
+
+</body>
+</html>

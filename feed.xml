@@ -4,7 +4,7 @@
     <author><name>mtxvp</name></author>
     <title>ByverScope — Explore Places Through Experiences</title>
     <id>https://byverscope.mtxvp.com/feed.xml</id>
-    <updated>2026-03-07T03:06:40Z</updated>
+    <updated>2026-03-14T23:27:32Z</updated>
     
     <entry>
         <id>https://byverscope.mtxvp.com/experience/afternoon-in-port-colborne.html</id>
@@ -20,6 +20,14 @@
         <link href="https://byverscope.mtxvp.com/experience/cobourg-brighton-colborne.html"/>
         <content type="html">South Northumberland: Brighton → Colborne → Cobourg</content>
         <published>2026-02-16T22:44:00Z</published>
+    </entry>
+    
+    <entry>
+        <id>https://byverscope.mtxvp.com/experience/ottawa-sussex-street.html</id>
+        <title>Ottawa Sussex street</title>
+        <link href="https://byverscope.mtxvp.com/experience/ottawa-sussex-street.html"/>
+        <content type="html">Ottawa Sussex street</content>
+        <published>2026-02-10T22:44:00Z</published>
     </entry>
     
     <entry>
