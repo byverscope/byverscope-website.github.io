@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://byverscope.mtxvp.com/</loc>
-    <lastmod>2026-04-28</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://byverscope.mtxvp.com/experience/elora-and-gorge.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -116,7 +116,7 @@
   </url>
   <url>
     <loc>https://byverscope.mtxvp.com/experience/summer-in-fenelon-falls.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -140,13 +140,19 @@
   </url>
   <url>
     <loc>https://byverscope.mtxvp.com/experience/quiet-day-in-lindsay.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://byverscope.mtxvp.com/experience/walk-in-erin.html</loc>
-    <lastmod>2026-05-05</lastmod>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://byverscope.mtxvp.com/experience/day-in-port-hope.html</loc>
+    <lastmod>2026-05-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

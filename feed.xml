@@ -4,7 +4,7 @@
     <author><name>mtxvp</name></author>
     <title>ByverScope — Explore Places Through Experiences</title>
     <id>https://byverscope.mtxvp.com/feed.xml</id>
-    <updated>2026-05-07T01:08:11Z</updated>
+    <updated>2026-05-07T01:47:17Z</updated>
     
     <entry>
         <id>https://byverscope.mtxvp.com/experience/markham-unionville-pond.html</id>
@@ -72,17 +72,17 @@
     
     <entry>
         <id>https://byverscope.mtxvp.com/experience/quiet-day-in-lindsay.html</id>
-        <title>Quiet day in Lindsay, ON</title>
+        <title>Quiet day in Lindsay</title>
         <link href="https://byverscope.mtxvp.com/experience/quiet-day-in-lindsay.html"/>
-        <content type="html">Quiet day in Lindsay, ON</content>
+        <content type="html">Quiet day in Lindsay</content>
         <published>2025-08-14T22:44:00Z</published>
     </entry>
     
     <entry>
         <id>https://byverscope.mtxvp.com/experience/summer-in-fenelon-falls.html</id>
-        <title>Summer in Fenelon Falls, ON</title>
+        <title>Summer in Fenelon Falls</title>
         <link href="https://byverscope.mtxvp.com/experience/summer-in-fenelon-falls.html"/>
-        <content type="html">Summer in Fenelon Falls, ON</content>
+        <content type="html">Summer in Fenelon Falls</content>
         <published>2024-10-15T22:44:00Z</published>
     </entry>
     
@@ -92,6 +92,14 @@
         <link href="https://byverscope.mtxvp.com/experience/walk-in-port-hope.html"/>
         <content type="html">Walk in Port Hope</content>
         <published>2024-09-21T22:44:00Z</published>
+    </entry>
+    
+    <entry>
+        <id>https://byverscope.mtxvp.com/experience/day-in-port-hope.html</id>
+        <title>Day in Port Hope</title>
+        <link href="https://byverscope.mtxvp.com/experience/day-in-port-hope.html"/>
+        <content type="html">Day in Port Hope</content>
+        <published>2024-09-21T21:30:00Z</published>
     </entry>
     
     <entry>
