@@ -25,6 +25,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://byverscope.mtxvp.com/404.html</loc>
+    <lastmod>2026-05-07</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://byverscope.mtxvp.com/subscription-confirm.html</loc>
     <lastmod>2026-01-26</lastmod>
     <changefreq>monthly</changefreq>
